@@ -43,6 +43,7 @@ section {
   padding: 0 80px;
   margin: auto;
 }
+.text-2,
 .logo,
 .navbar,
 .about,
@@ -104,6 +105,7 @@ section .title::after {
   padding: 30px 0;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
+  
 }
 
 .navbar.sticky {
@@ -121,6 +123,7 @@ section .title::after {
   color: #fff;
   font-size: 35px;
   font-weight: 600;
+  
 }
 
 .navbar .logo a span {
@@ -129,12 +132,13 @@ section .title::after {
 }
 
 .navbar.sticky .logo a span {
-  color: #FF1111CC;
+  color: crimson;
 }
 
 .navbar .menu li {
   list-style: none;
   display: inline-block;
+  
 }
 
 .navbar .menu li a {
@@ -151,7 +155,7 @@ section .title::after {
 }
 
 .navbar.sticky .menu li a:hover {
-  color: #fff;
+  color: crimson;
 }
 
 /* menu btn styling */
