@@ -24,9 +24,74 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <style>
+    
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:#373A56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    animation: pulse 1.5s infinite;
+    color: red;
+  
+}
+.circle:nth-child(1) {
+  animation-delay: 1s;
+  
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+        
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.content {
+    display: none;
+  }
+  </style>
 </head>
 
 <body class="light-theme">
+
+    
+  <div class="preloader">
+    <div class="loader">
+      <div class="circle">
+        <img srcset="" src="/Infinity@1x-1.9s-200px-200px (1).svg" alt="">
+      </div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </div>
 
   <!--
     - #HEADER
@@ -867,7 +932,18 @@
 
 
 
-
+<script>
+      // script.js
+    window.addEventListener("load", function() {
+      const preloader = document.querySelector(".preloader");
+      const content = document.querySelector(".content");
+    
+      setTimeout(function() {
+        preloader.style.display = "none";
+        content.style.display = "block";
+      }, 9000); // adjust the timeout to your liking
+    });
+</script>
 
   <!--
     - custom js link
