@@ -42,9 +42,79 @@
   <link rel="icon" href="images/icon.png" type="image/x-icon">
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
   <meta name="apple-mobile-web-app-status-bar" content="#202125">
+
+  <style>
+    
+
+
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:#373A56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    animation: pulse 1.5s infinite;
+    color: red;
+  
+}
+.circle:nth-child(1) {
+  animation-delay: 1s;
+  
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+        
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.content {
+    display: none;
+}
+  </style>
 </head>
 
 <body>
+  
+  <div class="preloader">
+    <div class="loader">
+      <div class="circle">
+        <img srcset="" src="/Infinity@1x-1.9s-200px-200px (1).svg" alt="">
+      </div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </div>
+  
+  
   <div class="scroll-up-btn">
     <i class="fas fa-angle-up"></i>
   </div>
@@ -260,6 +330,18 @@
         document.write(new Date().getFullYear());
       </script> All rights reserved By <i class="fa fa-code" style="color: red"></i> <a href="https://Instagram.com/ikr.maulana422"> maulanDevtech</a></p>
   </footer>
+  <script>
+      // script.js
+    window.addEventListener("load", function() {
+      const preloader = document.querySelector(".preloader");
+      const content = document.querySelector(".content");
+    
+      setTimeout(function() {
+        preloader.style.display = "none";
+        content.style.display = "block";
+      }, 7000); // adjust the timeout to your liking
+    });
+</script>
   <script src="about.js"></script>
 </body>
 
