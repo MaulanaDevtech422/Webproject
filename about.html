@@ -303,20 +303,22 @@
         </div>
         <div class="column right">
           <div class="text">Message me</div>
-                    <form action="mailto: ikrommaulana982@gmail.com" method="get">
+                      <form
+          action="#" onsubmit="sendMessageToWhatsapp()">
             <div class="fields">
               <div class="field name">
-                <input type="text" name="name" placeholder="Name" >
+                <input type="text" id="nama" placeholder="Name" >
               </div>
               <div class="field email">
-                <input type="email" name="email" placeholder="Email" required>
+                <input type="email"  placeholder="Email"
+        id="email" required>
               </div>
             </div>
             <div class="field">
-              <input name="subject" placeholder="Subject" required>
+              <input type="number" id="pesan" placeholder="No Telpon" required>
             </div>
             <div class="field textarea">
-              <textarea cols="30" rows="10" name="body" placeholder="Tulis pesan" required></textarea>
+              <textarea cols="30" rows="10" id="body" placeholder="Tulis pesan" required></textarea>
             </div>
             <div class="button-area">
               <button type="submit">Send message</button>
@@ -345,6 +347,24 @@
     });
 </script>
   <script src="about.js"></script>
+  <script>
+    function sendMessageToWhatsapp() {
+                    const urlToWhatsapp = `https://wa.me/6285712816240?text=Halo Admin 👋  perkenalkan
+                    nama saya:*${nama.value}*
+                     
+                     email: ${email.value}
+                                         No Telepon: ${pesan.value}
+                                         
+                  
+                   
+                   chat: ${body.value}
+                    
+                    `;
+                    
+  
+                    window.open(urlToWhatsapp, "_blank");
+    }
+  </script>
 </body>
 
 </html>
