@@ -343,21 +343,21 @@
       setTimeout(function() {
         preloader.style.display = "none";
         content.style.display = "block";
-      }, 5000); // adjust the timeout to your liking
+      }, 4000); // adjust the timeout to your liking
     });
 </script>
   <script src="about.js"></script>
   <script>
     function sendMessageToWhatsapp() {
                     const urlToWhatsapp = `https://wa.me/6285712816240?text=Halo Admin 👋  perkenalkan
-                    nama saya:*${nama.value}*
+                    *nama saya:${nama.value}
                      
                      email: ${email.value}
                                          No Telepon: ${pesan.value}
                                          
                   
                    
-                   chat: ${body.value}
+                   chat:* ${body.value}
                     
                     `;
                     
