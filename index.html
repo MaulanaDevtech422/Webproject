@@ -34,7 +34,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color:#373A56;
     display: flex;
     justify-content: center;
@@ -88,9 +88,10 @@
     
   <div class="preloader">
     <div class="loader">
-      <div class="circle">   </div>
+      <div class="circle"> 
+      </div>
       <div class="circle">
-                        <img srcset="" src="Infinity@1x-1.9s-200px-200px (1).svg" alt="">
+       <img srcset="" src="Infinity@1x-1.9s-200px-200px(1).svg" alt="">
       </div>
       <div class="circle"></div>
     </div>
@@ -107,13 +108,13 @@
       <nav class="navbar">
 
         <a href="index.html">
-          <img src="20240430_120622.png" alt="SimpleBlog logo" width="200" class="logo-light">
+          <img width="200" class="logo-light">
           <img src="aslilog.png" alt="SimpleBlog logo" width="200" class="logo-dark">
         </a>
 
         <div data-aos="zoom-in" data-aos-delay="300" class="btn-group">
 
-          <button data-aos="zoom-in" data-aos-delay="300" class="theme-btn theme-btn-mobile light">
+          <button  class="theme-btn theme-btn-mobile light">
             <ion-icon name="moon" class="moon"></ion-icon>
             <ion-icon name="sunny" class="sun"></ion-icon>
           </button>
@@ -934,8 +935,11 @@
 
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> 
+    AOS.init();
+  </script>
 <script>
-  AOS.init();
+  
       // script.js
     window.addEventListener("load", function() {
       const preloader = document.querySelector(".preloader");
@@ -944,7 +948,7 @@
       setTimeout(function() {
         preloader.style.display = "none";
         content.style.display = "block";
-      }, 3000); // penyetingan lama waktu load
+      }, 4500); // penyetingan lama waktu load
     });
 </script>
 
